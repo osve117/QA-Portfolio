@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caso de estudio de automatización QA en Urban Routes con Python, Selenium WebDriver, Pytest y Page Object Model.">
+    <title>Urban Routes | Oscar Verde QA Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="../index.html">OV.</a>
+            <div class="nav-links">
+                <a href="../index.html#proyectos">← Proyectos</a>
+                <a href="#contexto">Contexto</a>
+                <a href="#arquitectura">Arquitectura</a>
+                <a href="#pruebas">Pruebas</a>
+                <a href="#evidencias">Evidencias</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="project-hero-content">
+            <p class="eyebrow">CASO DE ESTUDIO · TEST AUTOMATION</p>
+            <h1>Urban Routes</h1>
+            <p class="project-subtitle">Automatización E2E con Python, Selenium y Pytest</p>
+            <p class="hero-description">
+                Suite automatizada para validar el flujo de solicitud de un taxi, desde la configuración
+                de origen y destino hasta la asignación de un conductor.
+            </p>
+
+            <div class="tags project-hero-tags">
+                <span>Python</span>
+                <span>Selenium WebDriver</span>
+                <span>Pytest</span>
+                <span>Page Object Model</span>
+                <span>Google Chrome</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="case-study">
+        <section class="case-section" id="contexto">
+            <div class="case-heading">
+                <p class="section-label">01 · CONTEXTO</p>
+                <h2>Qué automatiza el proyecto</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Urban Routes es una aplicación web para solicitar viajes. El objetivo de la suite
+                    fue automatizar el flujo principal de usuario: ingresar direcciones, seleccionar
+                    la tarifa Comfort, registrar un número telefónico, agregar una tarjeta, escribir
+                    un mensaje, solicitar servicios adicionales y esperar la información del conductor.
+                </p>
+                <p>
+                    La automatización se ejecutó con Selenium WebDriver y Pytest, manteniendo la lógica
+                    de interacción con la interfaz separada de los propios casos de prueba.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="arquitectura">
+            <div class="case-heading">
+                <p class="section-label">02 · ARQUITECTURA</p>
+                <h2>Cómo organicé la automatización</h2>
+            </div>
+            <div class="case-content">
+                <div class="responsibility-grid">
+                    <div class="info-card">
+                        <h3>Page Object Model</h3>
+                        <p>
+                            La clase <code>UrbanRoutesPage</code> concentra acciones de alto nivel como
+                            configurar la ruta, seleccionar opciones y consultar valores de la interfaz.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Selectores separados</h3>
+                        <p>
+                            Los localizadores están centralizados en <code>UrbanRoutesSelectors</code>,
+                            utilizando estrategias como <code>By.ID</code> y <code>By.XPATH</code>.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Datos de prueba</h3>
+                        <p>
+                            Los datos utilizados por los casos se mantienen separados de la lógica
+                            principal para evitar valores repetidos dentro de los tests.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Tests legibles</h3>
+                        <p>
+                            Los casos utilizan métodos del Page Object y aserciones directas, permitiendo
+                            que cada test describa claramente el comportamiento que valida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="pruebas">
+            <div class="case-heading">
+                <p class="section-label">03 · COBERTURA AUTOMATIZADA</p>
+                <h2>Flujos incluidos</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    La suite contiene nueve pruebas automatizadas que cubren diferentes pasos del flujo
+                    principal de solicitud de viaje.
+                </p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span>1</span>
+                        <div>
+                            <h3>Configuración de ruta</h3>
+                            <p>Validación de los campos de origen y destino mediante lectura posterior de sus valores.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2</span>
+                        <div>
+                            <h3>Selección de tarifa Comfort</h3>
+                            <p>Interacción con la opción de tarifa y comprobación de que quede seleccionada.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span>3</span>
+                        <div>
+                            <h3>Datos del viaje</h3>
+                            <p>Registro de teléfono, tarjeta, mensaje para el conductor y opciones adicionales.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span>4</span>
+                        <div>
+                            <h3>Solicitud y asignación</h3>
+                            <p>Validación del flujo hasta encontrar y mostrar información del conductor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="resultado">
+            <div class="case-heading">
+                <p class="section-label">04 · RESULTADO</p>
+                <h2>Ejecución de la suite</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    La ejecución mostrada en el proyecto recoge <strong>9 pruebas</strong> y finaliza con
+                    <strong>9 passed</strong>. La salida de Pytest permite revisar de forma individual
+                    el resultado de cada escenario y el resumen general de la suite.
+                </p>
+                <p>
+                    Este proyecto me permitió practicar no solo Selenium, sino también organización del código,
+                    reutilización de métodos, separación de responsabilidades y mantenimiento de una suite automatizada.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="evidencias">
+            <div class="case-heading">
+                <p class="section-label">05 · EVIDENCIAS</p>
+                <h2>Material del proyecto</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Estas capturas muestran la estructura del proyecto, la implementación del patrón POM,
+                    los selectores, ejemplos de tests, la ejecución completa y la documentación técnica.
+                </p>
+
+                <div class="evidence-gallery">
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-routes/urban-routes-project-structure.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-routes/urban-routes-project-structure.png" alt="Estructura del proyecto Urban Routes en PyCharm">
+                        </a>
+                        <figcaption>
+                            <strong>Estructura del proyecto</strong>
+                            <span>Organización de archivos para datos, helpers, Page Object, selectores, tests y documentación.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-routes/urban-routes-page-object.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-routes/urban-routes-page-object.png" alt="Implementación de UrbanRoutesPage con Page Object Model">
+                        </a>
+                        <figcaption>
+                            <strong>Page Object Model</strong>
+                            <span>Métodos reutilizables para interactuar con la interfaz y leer valores.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-routes/urban-routes-selectors.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-routes/urban-routes-selectors.png" alt="Selectores centralizados de Urban Routes">
+                        </a>
+                        <figcaption>
+                            <strong>Selectores centralizados</strong>
+                            <span>Localizadores separados mediante By.ID y By.XPATH.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-routes/urban-routes-test-example.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-routes/urban-routes-test-example.png" alt="Ejemplos de pruebas automatizadas de Urban Routes">
+                        </a>
+                        <figcaption>
+                            <strong>Ejemplos de tests</strong>
+                            <span>Pruebas legibles que consumen métodos del Page Object y validan resultados con assert.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item evidence-item-wide">
+                        <a href="../evidences/urban-routes/urban-routes-pytest-results.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-routes/urban-routes-pytest-results.png" alt="Resultado de ejecución de nueve pruebas con Pytest">
+                        </a>
+                        <figcaption>
+                            <strong>Ejecución con Pytest</strong>
+                            <span>Resultado de la suite: 9 pruebas ejecutadas y 9 aprobadas.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item evidence-item-wide">
+                        <a href="../evidences/urban-routes/urban-routes-readme.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-routes/urban-routes-readme.png" alt="README del proyecto Urban Routes">
+                        </a>
+                        <figcaption>
+                            <strong>Documentación técnica</strong>
+                            <span>Descripción, tecnologías utilizadas y estructura documentada del proyecto.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-navigation">
+            <a class="button outline" href="../index.html#proyectos">← Volver a proyectos</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Oscar Verde · QA Portfolio</p>
+    </footer>
+</body>
+</html>
