@@ -167,35 +167,44 @@
             </div>
             <div class="case-content">
                 <p>
-                    Las pruebas permitieron identificar comportamientos que no coincidían con lo esperado.
-                    Algunos ejemplos relevantes fueron:
+                    Durante la ejecución encontré defectos funcionales, visuales y de comportamiento
+                    que pude reproducir y documentar con evidencia.
                 </p>
 
                 <div class="findings-grid">
                     <article class="finding-card">
-                        <p class="finding-type">NOTIFICACIONES</p>
-                        <h3>No se reciben notificaciones esperadas</h3>
+                        <p class="finding-type">NOTIFICACIONES · US-26</p>
+                        <h3>No se recibe la notificación esperada</h3>
                         <p>
-                            Se realizaron nuevos intentos con diferentes pedidos y horarios para comprobar
-                            si el comportamiento podía reproducirse.
+                            La notificación prevista para cuando faltaban dos horas para finalizar el pedido
+                            no se recibió durante la ejecución del caso de prueba.
                         </p>
                     </article>
 
                     <article class="finding-card">
-                        <p class="finding-type">ESTADO DEL PEDIDO</p>
-                        <h3>El estado persiste después de cerrar sesión</h3>
+                        <p class="finding-type">MOBILE · US-29</p>
+                        <h3>Pedido duplicado en «Mis pedidos»</h3>
                         <p>
-                            Después de cerrar sesión, la aplicación seguía mostrando información del pedido
-                            anterior en lugar de limpiar correctamente el estado.
+                            Tras aceptar un único pedido, la aplicación móvil mostraba más de una tarjeta
+                            correspondiente al mismo pedido.
                         </p>
                     </article>
 
                     <article class="finding-card">
-                        <p class="finding-type">INTERFAZ MOBILE</p>
-                        <h3>Modal de conexión puede cerrarse de forma inesperada</h3>
+                        <p class="finding-type">ESTADO DEL PEDIDO · US-4</p>
+                        <h3>La cadena muestra menos estados de los requeridos</h3>
                         <p>
-                            El mensaje relacionado con la falta de conexión podía cerrarse al tocar fuera del
-                            modal o utilizar la acción de regresar.
+                            La pantalla de estado mostraba cuatro etapas cuando el requisito especificaba
+                            una cadena de cinco estados.
+                        </p>
+                    </article>
+
+                    <article class="finding-card">
+                        <p class="finding-type">WEB · US-7</p>
+                        <h3>Placeholder visible en la fecha de finalización</h3>
+                        <p>
+                            Durante el estado de paseo se mostraba <code>{{data}}</code> en lugar de la fecha
+                            calculada de finalización del alquiler.
                         </p>
                     </article>
                 </div>
@@ -228,26 +237,110 @@
             </div>
             <div class="case-content">
                 <p>
-                    La documentación del proyecto se está organizando para incorporar al portafolio únicamente
-                    materiales claros y útiles para una revisión técnica.
+                    Seleccioné evidencias que permiten revisar el diseño de pruebas, el trabajo con API
+                    y algunos de los defectos encontrados. Haz clic en cualquier imagen para verla en tamaño completo.
                 </p>
 
-                <div class="evidence-grid">
-                    <div class="evidence-card">
-                        <h3>Casos de prueba</h3>
-                        <p>Escenarios diseñados para validar el flujo principal y las condiciones de entrada.</p>
-                        <span class="status-badge">Por agregar</span>
-                    </div>
-                    <div class="evidence-card">
-                        <h3>Reportes de defectos</h3>
-                        <p>Ejemplos de incidencias documentadas con esperado, obtenido, severidad y evidencia.</p>
-                        <span class="status-badge">Por agregar</span>
-                    </div>
-                    <div class="evidence-card">
-                        <h3>Pruebas de API</h3>
-                        <p>Solicitudes utilizadas para preparar pedidos y validar respuestas del backend.</p>
-                        <span class="status-badge">Por agregar</span>
-                    </div>
+                <div class="evidence-gallery">
+                    <figure class="evidence-item evidence-item-wide">
+                        <a href="../evidences/urban-scooters/test-cases-overview.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/test-cases-overview.png" alt="Resumen de casos de prueba de Urban Scooters">
+                        </a>
+                        <figcaption>
+                            <strong>Casos de prueba</strong>
+                            <span>Vista general de la ejecución con resultados aprobados, no aprobados y vínculos a defectos.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/api-create-order.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/api-create-order.png" alt="Creación de pedido mediante API en Postman">
+                        </a>
+                        <figcaption>
+                            <strong>Creación de pedido por API</strong>
+                            <span>Solicitud POST ejecutada en Postman con respuesta HTTP 201.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-duplicate-order-mobile.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-duplicate-order-mobile.png" alt="Pedido duplicado en Mis pedidos de la aplicación móvil">
+                        </a>
+                        <figcaption>
+                            <strong>Pedido duplicado en Mobile</strong>
+                            <span>Evidencia visual del defecto reproducido en «Mis pedidos».</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-order-status-evidence.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-order-status-evidence.png" alt="Evidencia del defecto en la cadena de estado del pedido">
+                        </a>
+                        <figcaption>
+                            <strong>Estado del pedido</strong>
+                            <span>Evidencia del comportamiento incorrecto de la cadena de estados.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-order-status.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-order-status.png" alt="Reporte en Jira del defecto de estado del pedido">
+                        </a>
+                        <figcaption>
+                            <strong>Reporte Jira · Estado del pedido</strong>
+                            <span>Documentación del defecto con pasos y resultado esperado/obtenido.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-rental-date-placeholder.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-rental-date-placeholder.png" alt="Placeholder data mostrado en la fecha de finalización del alquiler">
+                        </a>
+                        <figcaption>
+                            <strong>Placeholder de fecha visible</strong>
+                            <span>La interfaz muestra <code>{{data}}</code> en lugar de la fecha calculada.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-rental-date-jira.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-rental-date-jira.png" alt="Reporte Jira del defecto de fecha de finalización">
+                        </a>
+                        <figcaption>
+                            <strong>Reporte Jira · US-7</strong>
+                            <span>Registro del defecto asociado a la fecha de finalización del alquiler.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-notifications-1.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-notifications-1.png" alt="Primera parte del reporte Jira sobre notificaciones">
+                        </a>
+                        <figcaption>
+                            <strong>Reporte Jira · Notificaciones (1/2)</strong>
+                            <span>Primera parte del reporte del fallo de notificación.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-notifications-2.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-notifications-2.png" alt="Segunda parte del reporte Jira sobre notificaciones">
+                        </a>
+                        <figcaption>
+                            <strong>Reporte Jira · Notificaciones (2/2)</strong>
+                            <span>Continuación del reporte con el resto de la información del defecto.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../evidences/urban-scooters/bug-no-internet-modal.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../evidences/urban-scooters/bug-no-internet-modal.png" alt="Reporte Jira del comportamiento del modal sin Internet">
+                        </a>
+                        <figcaption>
+                            <strong>Reporte Jira · Modal sin Internet</strong>
+                            <span>Ejemplo adicional de documentación de un defecto funcional en Mobile.</span>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
