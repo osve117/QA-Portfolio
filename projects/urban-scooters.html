@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caso de estudio QA de Urban Scooters: pruebas web, API y mobile realizadas por Oscar Verde.">
+    <title>Urban Scooters | Oscar Verde QA Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="../index.html">OV.</a>
+            <div class="nav-links">
+                <a href="../index.html#proyectos">← Proyectos</a>
+                <a href="#contexto">Contexto</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#hallazgos">Hallazgos</a>
+                <a href="#evidencias">Evidencias</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="project-hero-content">
+            <p class="eyebrow">CASO DE ESTUDIO · QA</p>
+            <h1>Urban Scooters</h1>
+            <p class="project-subtitle">Pruebas Web, API y Mobile</p>
+            <p class="hero-description">
+                Validación del flujo de creación y procesamiento de pedidos mediante análisis de requisitos,
+                diseño de pruebas, ejecución manual, pruebas de API y documentación de defectos.
+            </p>
+
+            <div class="tags project-hero-tags">
+                <span>Manual QA</span>
+                <span>API Testing</span>
+                <span>Mobile Testing</span>
+                <span>Postman</span>
+                <span>Jira</span>
+                <span>Android Studio</span>
+                <span>DevTools</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="case-study">
+        <section class="case-section" id="contexto">
+            <div class="case-heading">
+                <p class="section-label">01 · CONTEXTO</p>
+                <h2>Qué estaba probando</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Urban Scooters es un proyecto de QA enfocado en un sistema de renta y gestión de scooters.
+                    El trabajo incluyó componentes web, servicios API y una aplicación móvil relacionada con
+                    el procesamiento de pedidos.
+                </p>
+                <p>
+                    El objetivo fue comprobar que el flujo de pedido funcionara de acuerdo con los requisitos,
+                    desde la introducción de datos y la creación de la orden hasta su gestión posterior en la aplicación.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="contribucion">
+            <div class="case-heading">
+                <p class="section-label">02 · CONTRIBUCIÓN</p>
+                <h2>Mi rol</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Analicé requisitos, diseñé y ejecuté pruebas, preparé datos mediante API y documenté
+                    los defectos encontrados con sus resultados esperados, resultados obtenidos y evidencias.
+                </p>
+
+                <div class="responsibility-grid">
+                    <div class="info-card">
+                        <h3>Diseño de pruebas</h3>
+                        <p>Listas de comprobación, casos de prueba, validaciones positivas y negativas.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>API</h3>
+                        <p>Uso de solicitudes HTTP para crear pedidos y preparar datos necesarios para las pruebas.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Mobile</h3>
+                        <p>Ejecución de pruebas en entorno móvil y emulado para validar estados, notificaciones y comportamiento de la interfaz.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Defectos</h3>
+                        <p>Registro de incidencias en Jira con pasos, esperado, obtenido, severidad y evidencia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="proceso">
+            <div class="case-heading">
+                <p class="section-label">03 · PROCESO Y DECISIONES</p>
+                <h2>Cómo abordé las pruebas</h2>
+            </div>
+            <div class="case-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span>1</span>
+                        <div>
+                            <h3>Análisis de requisitos</h3>
+                            <p>
+                                Revisé los requisitos para identificar los flujos principales, validaciones,
+                                estados del pedido y condiciones que debían comprobarse.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>2</span>
+                        <div>
+                            <h3>Diseño de cobertura</h3>
+                            <p>
+                                Organicé las comprobaciones por funcionalidad y utilicé escenarios positivos,
+                                negativos, clases de equivalencia y valores límite cuando correspondía.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>3</span>
+                        <div>
+                            <h3>Preparación de datos por API</h3>
+                            <p>
+                                Utilicé solicitudes de API para crear pedidos y obtener los datos necesarios
+                                antes de validar su comportamiento en otros componentes del sistema.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>4</span>
+                        <div>
+                            <h3>Ejecución y reproducción</h3>
+                            <p>
+                                Cuando aparecía un comportamiento inesperado, repetía el escenario y modificaba
+                                las condiciones de prueba para determinar si el problema era reproducible.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>5</span>
+                        <div>
+                            <h3>Documentación</h3>
+                            <p>
+                                Registré los defectos de forma estructurada y relacioné cada hallazgo con
+                                el comportamiento esperado definido en los requisitos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="hallazgos">
+            <div class="case-heading">
+                <p class="section-label">04 · HALLAZGOS</p>
+                <h2>Ejemplos de problemas detectados</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Las pruebas permitieron identificar comportamientos que no coincidían con lo esperado.
+                    Algunos ejemplos relevantes fueron:
+                </p>
+
+                <div class="findings-grid">
+                    <article class="finding-card">
+                        <p class="finding-type">NOTIFICACIONES</p>
+                        <h3>No se reciben notificaciones esperadas</h3>
+                        <p>
+                            Se realizaron nuevos intentos con diferentes pedidos y horarios para comprobar
+                            si el comportamiento podía reproducirse.
+                        </p>
+                    </article>
+
+                    <article class="finding-card">
+                        <p class="finding-type">ESTADO DEL PEDIDO</p>
+                        <h3>El estado persiste después de cerrar sesión</h3>
+                        <p>
+                            Después de cerrar sesión, la aplicación seguía mostrando información del pedido
+                            anterior en lugar de limpiar correctamente el estado.
+                        </p>
+                    </article>
+
+                    <article class="finding-card">
+                        <p class="finding-type">INTERFAZ MOBILE</p>
+                        <h3>Modal de conexión puede cerrarse de forma inesperada</h3>
+                        <p>
+                            El mensaje relacionado con la falta de conexión podía cerrarse al tocar fuera del
+                            modal o utilizar la acción de regresar.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="resultado">
+            <div class="case-heading">
+                <p class="section-label">05 · RESULTADO Y APRENDIZAJE</p>
+                <h2>Qué me dejó el proyecto</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Este proyecto me permitió trabajar un flujo de QA de principio a fin: interpretar requisitos,
+                    diseñar cobertura, preparar datos, ejecutar pruebas en distintos componentes y convertir
+                    comportamientos inesperados en reportes de defectos claros y reproducibles.
+                </p>
+                <p>
+                    También reforcé la importancia de no asumir que un fallo pertenece a una sola capa del sistema.
+                    Al combinar pruebas web, API y mobile pude comparar comportamientos y reunir mejores evidencias
+                    antes de reportar una incidencia.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="evidencias">
+            <div class="case-heading">
+                <p class="section-label">06 · EVIDENCIAS</p>
+                <h2>Material del proyecto</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    La documentación del proyecto se está organizando para incorporar al portafolio únicamente
+                    materiales claros y útiles para una revisión técnica.
+                </p>
+
+                <div class="evidence-grid">
+                    <div class="evidence-card">
+                        <h3>Casos de prueba</h3>
+                        <p>Escenarios diseñados para validar el flujo principal y las condiciones de entrada.</p>
+                        <span class="status-badge">Por agregar</span>
+                    </div>
+                    <div class="evidence-card">
+                        <h3>Reportes de defectos</h3>
+                        <p>Ejemplos de incidencias documentadas con esperado, obtenido, severidad y evidencia.</p>
+                        <span class="status-badge">Por agregar</span>
+                    </div>
+                    <div class="evidence-card">
+                        <h3>Pruebas de API</h3>
+                        <p>Solicitudes utilizadas para preparar pedidos y validar respuestas del backend.</p>
+                        <span class="status-badge">Por agregar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-navigation">
+            <a class="button outline" href="../index.html#proyectos">← Volver a proyectos</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Oscar Verde · QA Portfolio</p>
+    </footer>
+</body>
+</html>
