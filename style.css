@@ -625,3 +625,20 @@ footer {
         max-height: none;
     }
 }
+
+
+/* Text alignment: justify descriptive paragraphs across the portfolio */
+.hero-description,
+.section-intro,
+.project-card p:not(.project-type),
+.contact > p:not(.section-label),
+.project-hero .hero-description,
+.case-content p,
+.info-card p,
+.finding-card p,
+.evidence-card p,
+.timeline-item p,
+.evidence-item figcaption span {
+    text-align: justify;
+    text-justify: inter-word;
+}
