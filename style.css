@@ -585,3 +585,43 @@ footer {
         height: 240px;
     }
 }
+
+
+/* Evidence images: fit fully inside the card without horizontal scrolling */
+.evidence-item,
+.evidence-item a {
+    max-width: 100%;
+}
+
+.evidence-item a {
+    overflow: hidden;
+}
+
+.evidence-item img,
+.evidence-item-wide img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.evidence-item-wide img {
+    max-height: 650px;
+}
+
+.case-content,
+.evidence-gallery {
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 700px) {
+    .evidence-item img,
+    .evidence-item-wide img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+}
