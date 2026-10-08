@@ -655,3 +655,11 @@ footer {
     text-justify: inter-word;
     hyphens: auto;
 }
+
+
+/* Global paragraph alignment */
+p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+}
