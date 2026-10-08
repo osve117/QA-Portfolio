@@ -642,3 +642,16 @@ footer {
     text-align: justify;
     text-justify: inter-word;
 }
+
+
+/* Ensure long-form portfolio copy is justified consistently */
+.case-study p:not(.section-label):not(.finding-type),
+.section p:not(.section-label):not(.project-type),
+.project-card p:not(.project-type),
+.project-hero .hero-description,
+.hero .hero-description,
+.evidence-item figcaption span {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+}
