@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Urban Grocers API testing case study using Postman, positive and negative scenarios, equivalence classes and boundary values.">
+    <title>Urban Grocers | Oscar Verde QA Portfolio</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="alternate" hreflang="es" href="https://osve117.github.io/QA-Portfolio/projects/urban-grocers.html">
+    <link rel="alternate" hreflang="en" href="https://osve117.github.io/QA-Portfolio/en/projects/urban-grocers.html">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="../index.html">OV.</a>
+            <div class="nav-links">
+                <a href="../index.html#proyectos">← Projects</a>
+                <a href="#contexto">Context</a>
+                <a href="#estrategia">Strategy</a>
+                <a href="#hallazgos">Findings</a>
+                <a href="#evidencias">Evidence</a>
+                <a class="language-link" href="../../projects/urban-grocers.html" lang="es" hreflang="es" aria-label="Switch to Spanish">ES</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="project-hero-content">
+            <p class="eyebrow">CASE STUDY · API TESTING</p>
+            <h1>Urban Grocers</h1>
+            <p class="project-subtitle">Functional API Testing with Postman</p>
+            <p class="hero-description">
+                Test design and execution to validate endpoints, parameters, HTTP responses and invalid input handling in kit, order and delivery services.
+            </p>
+
+            <div class="tags project-hero-tags">
+                <span>Postman</span>
+                <span>REST API</span>
+                <span>HTTP</span>
+                <span>Test Design</span>
+                <span>Boundary Values</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="case-study">
+        <section class="case-section" id="contexto">
+            <div class="case-heading">
+                <p class="section-label">01 · CONTEXT</p>
+                <h2>What I tested</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Urban Grocers provides an API for managing kits, products, orders and delivery services. The project aimed to validate the behavior of different endpoints through HTTP requests, checking successful responses and negative scenarios.
+                </p>
+                <p>
+                    I ran the tests in Postman, reviewing the method, endpoint, headers, body, status code and response content.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="estrategia">
+            <div class="case-heading">
+                <p class="section-label">02 · STRATEGY</p>
+                <h2>How I designed the tests</h2>
+            </div>
+            <div class="case-content">
+                <div class="responsibility-grid">
+                    <div class="info-card">
+                        <h3>Positive scenarios</h3>
+                        <p>
+                            I validated successful operations with valid data, such as adding existing products to a kit and checking that its contents were updated.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Negative scenarios</h3>
+                        <p>
+                            I sent inputs that violated the expected rules to check whether the API rejected the data and handled errors gracefully.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Boundary values</h3>
+                        <p>
+                            I tested out-of-range values, such as negative delivery times, to identify validation failures in the services.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Response validation</h3>
+                        <p>
+                            I compared the HTTP status code and response body with the expected behavior to identify backend inconsistencies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="hallazgos">
+            <div class="case-heading">
+                <p class="section-label">03 · FINDINGS</p>
+                <h2>Key defects</h2>
+            </div>
+            <div class="case-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span>1</span>
+                        <div>
+                            <h3>Negative delivery time causes an internal error</h3>
+                            <p>
+                                When sending <code>deliveryTime: -1</code> to the courier verification service, the API returned <code>500 Internal Server Error</code>
+                                instead of handling the invalid input with a controlled response.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span>2</span>
+                        <div>
+                            <h3>Negative quantity accepted by the API</h3>
+                            <p>
+                                When adding a product with a negative quantity to a kit, the backend returned
+                                <code>200 OK</code> and stored negative values in <code>quantity</code>
+                                and <code>productsCount</code>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="resultado">
+            <div class="case-heading">
+                <p class="section-label">04 · RESULTS</p>
+                <h2>What the project demonstrates</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    This project demonstrates my ability to build HTTP requests, work with JSON data, validate response codes and identify validation problems that are not always signaled by an error status code.
+                </p>
+                <p>
+                    It also provided practice in positive and negative test design, boundary values and analysis of how a backend actually handles invalid inputs.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="evidencias">
+            <div class="case-heading">
+                <p class="section-label">05 · EVIDENCE</p>
+                <h2>Requests and responses</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    The following screenshots show a valid workflow and two defects identified during API testing in Postman.
+                </p>
+
+                <p class="evidence-note">Original project screenshots are preserved as evidence; some contain Spanish text. All descriptions and captions on this page are in English.</p>
+
+                <div class="evidence-gallery">
+                    <figure class="evidence-item evidence-item-wide">
+                        <a href="../../evidences/urban-grocers/urban-grocers-positive-request.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-grocers/urban-grocers-positive-request.png" alt="Positive Urban Grocers request with a successful response">
+                        </a>
+                        <figcaption>
+                            <strong>Positive scenario</strong>
+                            <span>A valid request executed successfully with a successful HTTP response.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item evidence-item-wide">
+                        <a href="../../evidences/urban-grocers/urban-grocers-negative-delivery-time-500.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-grocers/urban-grocers-negative-delivery-time-500.png" alt="Negative delivery time causes a 500 error in Urban Grocers">
+                        </a>
+                        <figcaption>
+                            <strong>Negative deliveryTime</strong>
+                            <span>An out-of-range value causes a 500 Internal Server Error instead of graceful error handling.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item evidence-item-wide">
+                        <a href="../../evidences/urban-grocers/urban-grocers-negative-quantity-accepted.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-grocers/urban-grocers-negative-quantity-accepted.png" alt="Negative quantity accepted with 200 OK in Urban Grocers">
+                        </a>
+                        <figcaption>
+                            <strong>Negative quantity accepted</strong>
+                            <span>The API returns 200 OK and stores negative values in the product quantity and kit total.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-navigation">
+            <a class="button outline" href="../index.html#proyectos">← Back to projects</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Oscar Verde · QA Portfolio</p>
+    </footer>
+</body>
+</html>

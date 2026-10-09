@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Urban Scooters QA case study: web, API and mobile testing by Oscar Verde.">
+    <title>Urban Scooters | Oscar Verde QA Portfolio</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="alternate" hreflang="es" href="https://osve117.github.io/QA-Portfolio/projects/urban-scooters.html">
+    <link rel="alternate" hreflang="en" href="https://osve117.github.io/QA-Portfolio/en/projects/urban-scooters.html">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="../index.html">OV.</a>
+            <div class="nav-links">
+                <a href="../index.html#proyectos">← Projects</a>
+                <a href="#contexto">Context</a>
+                <a href="#proceso">Process</a>
+                <a href="#hallazgos">Findings</a>
+                <a href="#evidencias">Evidence</a>
+                <a class="language-link" href="../../projects/urban-scooters.html" lang="es" hreflang="es" aria-label="Switch to Spanish">ES</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="project-hero-content">
+            <p class="eyebrow">CASE STUDY · QA</p>
+            <h1>Urban Scooters</h1>
+            <p class="project-subtitle">Web, API and Mobile Testing</p>
+            <p class="hero-description">
+                Validation of the order creation and processing workflow through requirements analysis, test design, manual execution, API testing and defect documentation.
+            </p>
+
+            <div class="tags project-hero-tags">
+                <span>Manual QA</span>
+                <span>API Testing</span>
+                <span>Mobile Testing</span>
+                <span>Postman</span>
+                <span>Jira</span>
+                <span>Android Studio</span>
+                <span>DevTools</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="case-study">
+        <section class="case-section" id="contexto">
+            <div class="case-heading">
+                <p class="section-label">01 · CONTEXT</p>
+                <h2>What I tested</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    Urban Scooters is a QA project focused on a scooter rental and management system. The work covered web components, API services and a mobile application used to process orders.
+                </p>
+                <p>
+                    The objective was to verify that the order workflow met the requirements, from data entry and order creation through subsequent management in the application.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="contribucion">
+            <div class="case-heading">
+                <p class="section-label">02 · CONTRIBUTION</p>
+                <h2>My role</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    I analyzed requirements, designed and executed tests, prepared data through the API and documented defects with expected results, actual results and supporting evidence.
+                </p>
+
+                <div class="responsibility-grid">
+                    <div class="info-card">
+                        <h3>Test design</h3>
+                        <p>Checklists, test cases, and positive and negative validation scenarios.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>API</h3>
+                        <p>HTTP requests to create orders and prepare the data needed for testing.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Mobile</h3>
+                        <p>Testing on mobile devices and emulators to validate order states, notifications and interface behavior.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Defects</h3>
+                        <p>Bug reports in Jira with reproduction steps, expected and actual results, severity and evidence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="proceso">
+            <div class="case-heading">
+                <p class="section-label">03 · PROCESS AND DECISIONS</p>
+                <h2>How I approached testing</h2>
+            </div>
+            <div class="case-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span>1</span>
+                        <div>
+                            <h3>Requirements analysis</h3>
+                            <p>
+                                I reviewed the requirements to identify the main workflows, validation rules, order states and conditions to test.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>2</span>
+                        <div>
+                            <h3>Coverage design</h3>
+                            <p>
+                                I organized checks by feature and used positive and negative scenarios, equivalence classes and boundary values where applicable.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>3</span>
+                        <div>
+                            <h3>Test data preparation through the API</h3>
+                            <p>
+                                I used API requests to create orders and obtain the necessary data before validating behavior in other system components.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>4</span>
+                        <div>
+                            <h3>Execution and reproduction</h3>
+                            <p>
+                                When unexpected behavior appeared, I repeated the scenario and varied the test conditions to determine whether the issue was reproducible.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>5</span>
+                        <div>
+                            <h3>Documentation</h3>
+                            <p>
+                                I documented defects in a structured format and linked each finding to the expected behavior defined in the requirements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="hallazgos">
+            <div class="case-heading">
+                <p class="section-label">04 · FINDINGS</p>
+                <h2>Examples of issues identified</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    During execution, I identified functional, visual and behavioral defects that I could reproduce and document with evidence.
+                </p>
+
+                <div class="findings-grid">
+                    <article class="finding-card">
+                        <p class="finding-type">NOTIFICATIONS · US-26</p>
+                        <h3>Expected notification not received</h3>
+                        <p>
+                            The notification expected two hours before the order ended was not received during test execution.
+                        </p>
+                    </article>
+
+                    <article class="finding-card">
+                        <p class="finding-type">MOBILE · US-29</p>
+                        <h3>Duplicate order in “My orders”</h3>
+                        <p>
+                            After accepting a single order, the mobile application displayed more than one card for the same order.
+                        </p>
+                    </article>
+
+                    <article class="finding-card">
+                        <p class="finding-type">ORDER STATUS · US-4</p>
+                        <h3>Status sequence contains fewer stages than required</h3>
+                        <p>
+                            The status screen showed four stages, while the requirement specified a sequence of five states.
+                        </p>
+                    </article>
+
+                    <article class="finding-card">
+                        <p class="finding-type">WEB · US-7</p>
+                        <h3>Placeholder displayed instead of the rental end date</h3>
+                        <p>
+                            While the ride was in progress, the interface displayed <code>{{data}}</code> instead of the calculated rental end date.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="resultado">
+            <div class="case-heading">
+                <p class="section-label">05 · RESULTS AND LEARNING</p>
+                <h2>What I learned</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    This project allowed me to practice a complete QA workflow: interpreting requirements, designing coverage, preparing data, testing different components and turning unexpected behavior into clear, reproducible bug reports.
+                </p>
+                <p>
+                    It also reinforced the importance of investigating issues across system layers. Combining web, API and mobile testing helped me compare behavior and gather stronger evidence before reporting an issue.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="evidencias">
+            <div class="case-heading">
+                <p class="section-label">06 · EVIDENCE</p>
+                <h2>Project materials</h2>
+            </div>
+            <div class="case-content">
+                <p>
+                    I selected evidence illustrating test design, API work and some of the defects found. Click any image to view it at full size.
+                </p>
+
+                <p class="evidence-note">Original project screenshots are preserved as evidence; some contain Spanish text. All descriptions and captions on this page are in English.</p>
+
+                <div class="evidence-gallery">
+                    <figure class="evidence-item evidence-item-wide">
+                        <a href="../../evidences/urban-scooters/test-cases-overview.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/test-cases-overview.png" alt="Urban Scooters test case overview">
+                        </a>
+                        <figcaption>
+                            <strong>Test cases</strong>
+                            <span>Execution overview with passed and failed results and links to bug reports.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/api-create-order.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/api-create-order.png" alt="Order creation through the API in Postman">
+                        </a>
+                        <figcaption>
+                            <strong>Order creation through the API</strong>
+                            <span>POST request executed in Postman with an HTTP 201 response.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-duplicate-order-mobile.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-duplicate-order-mobile.png" alt="Duplicate order in My orders in the mobile application">
+                        </a>
+                        <figcaption>
+                            <strong>Duplicate order on mobile</strong>
+                            <span>Visual evidence of the defect reproduced in “My orders”.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-order-status-evidence.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-order-status-evidence.png" alt="Evidence of the defect in the order status sequence">
+                        </a>
+                        <figcaption>
+                            <strong>Order status</strong>
+                            <span>Evidence of incorrect behavior in the order status sequence.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-order-status.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-order-status.png" alt="Jira report for the order status defect">
+                        </a>
+                        <figcaption>
+                            <strong>Jira report · Order status</strong>
+                            <span>Bug documentation with reproduction steps and expected and actual results.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-rental-date-placeholder.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-rental-date-placeholder.png" alt="Data placeholder displayed instead of the rental end date">
+                        </a>
+                        <figcaption>
+                            <strong>Visible date placeholder</strong>
+                            <span>The interface displays <code>{{data}}</code> instead of the calculated date.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-rental-date-jira.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-rental-date-jira.png" alt="Jira report for the rental end date defect">
+                        </a>
+                        <figcaption>
+                            <strong>Jira report · US-7</strong>
+                            <span>Bug report related to the rental end date.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-notifications-1.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-notifications-1.png" alt="First part of the Jira report about notifications">
+                        </a>
+                        <figcaption>
+                            <strong>Jira report · Notifications (1/2)</strong>
+                            <span>First part of the report for the notification failure.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-notifications-2.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-notifications-2.png" alt="Second part of the Jira report about notifications">
+                        </a>
+                        <figcaption>
+                            <strong>Jira report · Notifications (2/2)</strong>
+                            <span>Continuation of the report with the remaining defect details.</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="evidence-item">
+                        <a href="../../evidences/urban-scooters/bug-no-internet-modal.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../../evidences/urban-scooters/bug-no-internet-modal.png" alt="Jira report for the no internet connection dialog behavior">
+                        </a>
+                        <figcaption>
+                            <strong>Jira report · No internet connection dialog</strong>
+                            <span>Another example of a documented functional defect in the mobile application.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-navigation">
+            <a class="button outline" href="../index.html#proyectos">← Back to projects</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Oscar Verde · QA Portfolio</p>
+    </footer>
+</body>
+</html>
